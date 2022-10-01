@@ -38,6 +38,7 @@ body {
 
 .content {
     padding-left: 3%;
+    padding-top: 2%;
 }
 
 .content-row {
@@ -49,7 +50,7 @@ body {
 }
 
 .footer {
-    width: 100%;
-    position: absolute;
+    position: block;
     bottom: 0;
+    text-align: center;
 }
