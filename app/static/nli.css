@@ -50,9 +50,9 @@ body {
 }
 
 .footer {
-    width: 100%;
-    position: absolute;
+    position: block;
     bottom: 0;
+    text-align: center;
 }
 
 
