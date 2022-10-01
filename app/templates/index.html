@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container">
+    <h2>The challenge</h2>
+    <p>
+        If you have two sentences, there are three ways they could be related: one could entail the other, one could
+        contradict the other, or they could be unrelated. <b>Natural Language Inference (NLI)</b> is a popular NLP
+        problem that involves determining how pairs of sentences (consisting of a premise and a hypothesis) are related.
+        <br>
+    </p>
+    <p>
+        Your task is to create an NLI model that assigns labels of 0, 1, or 2 (corresponding to entailment, neutral, and
+        contradiction) to pairs of <b>premises and hypotheses.</b> To make things more interesting, the train and test
+        set include text in fifteen different languages!
+    </p>
+    <p>For more details: <a href="https://www.kaggle.com/competitions/contradictory-my-dear-watson/overview">Link</a>
+    </p>
+</div>
+<div class="content-row">
+    <div class="content-column">
+        <div class="div-form">
+            <form method=post enctype=multipart/form-data>
+                <center>
+                    <h3>Premise</h3>
+                    <input name="premise" type="text" size="70" placeholder="Type the premise"><br>
+                    <h3>Hypothesis</h3>
+                    <input name="hypothesis" type="text" size="70" placeholder="Type the hypothesis"><br>
+                    <br>
+                    <label for="model">Choose model to predict: </label>
+                    <select name="model" id="model">
+                        <option value="BERT" selected> BERT</option>
+                        <option value="RoBERTa">RoBERTa</option>
+                    </select><br>
+                    <br>
+                    <button class="btn btn-outline-primary btn-block" type="submit" style="width: 50%;">Predict</button>
+                </center>
+            </form>
+        </div>
+    </div>
+    <div class="content-column">
+        <h2>Example:</h2>
+        <img src="static/images/sample.png">
+    </div>
+</div>
+{% endblock %}
