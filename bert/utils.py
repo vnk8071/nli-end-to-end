@@ -3,9 +3,6 @@ import datetime
 import re
 
 import matplotlib.pyplot as plt
-from nltk.corpus import stopwords
-
-STOPWORDS = stopwords.words("english")
 
 MAX_INPUT_LENGTH = 512
 
@@ -25,20 +22,22 @@ def trim_sentence(sentence):
     except:
         return sentence
 
-def clean_text(text, stopwords=STOPWORDS):
-    text = text.lower()
+def remove_punctuation(sentence):
+    sentence = re.sub(r"[()\"#/@;:<>{}`+=~|.!?,]", " ", sentence)
+    return sentence
+
+
+def clean_sentence(sentence, stopwords):
+    sentence = sentence.lower()
     
     # Remove stopwords
     pattern = re.compile(r"\b(" + r"|".join(stopwords) + r")\b\s*")
-    text = pattern.sub("", text)
+    sentence = pattern.sub("", sentence)
     
     # Spacing and filters
-    text = re.sub(r"([-;;.,!?<=>])", r" \1 ", text)
-    text = re.sub("[^A-Za-z0-9]+", " ", text) # remove non alphanumeric chars
-    text = re.sub(" +", " ", text)  # remove multiple spaces
-    text = text.strip()
-    
-    return text
+    sentence = re.sub(" +", " ", sentence)  # remove multiple spaces
+    sentence = sentence.strip()
+    return sentence
 
 def save_logs(logs, NUM_EPOCHS):
     time_now = datetime.datetime.now()

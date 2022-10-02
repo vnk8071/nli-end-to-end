@@ -3,9 +3,34 @@
 {% block content %}
 <div class="content-row">
     <div class="content-column">
-        <h3>Add special token</h3>
-        <p>{{user_premise}}</p>
-        <p>{{user_hypothesis}}</p>
+        <h3>User input</h3>
+        <p>Original premise: {{user_premise}}</p>
+        <p>Original hypothesis: {{user_hypothesis}}</p>
+        <hr>
+        <h3>Step 1: Remove special punctuation</h3>
+        <p>Premise: {{premise_rp}}</p>
+        <p>Hypothesis: {{hypothesis_rp}}</p>
+        <hr>
+        <h3>Step 2: Translate to English</h3>
+        <p>Premise: {{premise_translated}}</p>
+        <p>Hypothesis: {{hypothesis_translated}}</p>
+        <hr>
+        <h3>Step 3: Clean stop words and multiple spaces</h3>
+        <p>Premise: {{premise_clean}}</p>
+        <p>Hypothesis: {{hypothesis_clean}}</p>
+        <hr>
+        <h3>Step 4: Add special token</h3>
+        <p>Premise: {{premise}}</p>
+        <p>Hypothesis: {{hypothesis}}</p>
+        <hr>
+        <h3>Step 5: Set up input for BERT model</h3>
+        <p>Token ids: {{index}}</p>
+        <p>Input mask: {{mask}}</p>
+        <p>Input type ids: {{token_type}}</p>
+        <hr>
+        <h3>Step 6: Classifier of BERT model</h3>
+        <p>Probability: {{prob}}</p>
+        <p>Prediction: {{pred}}</p>
     </div>
     <div class="content-column">
         <h2>Example:</h2>

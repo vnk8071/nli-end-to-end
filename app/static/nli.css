@@ -37,7 +37,8 @@ body {
 }
 
 .content {
-    padding-left: 3%;
+    padding-left: 2%;
+    padding-right: 2%;
 }
 
 .content-row {
@@ -54,7 +55,28 @@ body {
 }
 
 .footer {
-    width: 100%;
-    position: absolute;
+    position: block;
     bottom: 0;
+    text-align: center;
+}
+
+
+.content-database table {
+    width: 100%;
+    /* border-collapse: collapse; */
+    border: 1px solid rgb(0, 0, 0);
+    ;
+}
+
+.content-database,
+th,
+tr,
+ul {
+    text-align: center;
+}
+
+.content-database ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
 }
