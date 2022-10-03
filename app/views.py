@@ -95,4 +95,4 @@ def document():
 
 if __name__ == '__main__':
     create_table()
-    app.run()
+    app.run(host=app.config['HOST'], port=app.config['PORT'])

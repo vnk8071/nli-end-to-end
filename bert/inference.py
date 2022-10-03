@@ -3,7 +3,8 @@ import time
 
 from trainer import BERTNLITrainer
 from deep_translator import GoogleTranslator
-
+import nltk
+nltk.download('stopwords')
 from utils import remove_punctuation, clean_sentence
 from nltk.corpus import stopwords
 
