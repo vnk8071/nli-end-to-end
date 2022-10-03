@@ -22,3 +22,4 @@ gdown==4.5.1
 nltk==3.7
 sklearn==1.1.2
 SentencePiece==0.1.97
+wtforms==3.0.1
