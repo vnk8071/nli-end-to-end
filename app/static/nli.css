@@ -46,9 +46,8 @@ body {
     display: flex;
 }
 
-.content-row h2 {
+.content-row h2{
     color: blueviolet;
-
 }
 
 .content-column {

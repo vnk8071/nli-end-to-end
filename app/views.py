@@ -24,7 +24,7 @@ def test():
     return render_template("predict_roberta.html", premise='Whats up nigga', hypothesis='hello world',
                            premise_cl='hello world', hypothesis_cl='hello world', index='hello world',
                            mask='hello world', prob='hello world', pred='hello world')
-                           
+
 @app.route("/", methods=(["GET", "POST"]))
 def user_input():
     if request.method == "POST":
@@ -57,6 +57,7 @@ def user_input():
                 db.session.add(result)
                 db.session.commit()
                 return render_template("predict.html", user_premise=user_premise, user_hypothesis=user_hypothesis, premise_rp=premise_rp, hypothesis_rp=hypothesis_rp, premise_translated=premise_translated, hypothesis_translated=hypothesis_translated, premise_clean=premise_clean, hypothesis_clean=hypothesis_clean, premise=premise, hypothesis=hypothesis, index=index, mask=mask, token_type=token_type, prob=prob, pred=pred)
+                
             elif user_model == "RoBERTa":
                 (premise, hypothesis), (input_ids, attention_mask), decode, (pred, prob) = roberta_inference(user_premise, user_hypothesis)
                 result = NLIDatabase(premise=user_premise,
@@ -90,6 +91,7 @@ def delete(id):
 @app.route("/document")
 def document():
     return render_template("document.html")
+
 
 if __name__ == '__main__':
     create_table()

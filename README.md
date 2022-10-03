@@ -43,7 +43,13 @@ or simple with
 python bert/inference.py
 ```
 
-## RoBERTa
+## RoBERTa 
+
+Train:
+```
+python roberta/roberta_train.py
+```
+### Inference:
 ```
 python roberta/roberta_inference.py --premise "<premise>" --hypothesis "<hypotheis>"
 python roberta/roberta_inference.py --premise "My own little corner of the world, policy working, is an example." --hypothesis "An example is policy working.,en,English"
@@ -52,6 +58,7 @@ or simple with
 ```
 python roberta/roberta_inference.py
 ```
+
 ## API
 Run app Flask
 ```

@@ -56,17 +56,19 @@ def roberta_inference(premise=args.premise, hypothesis=args.hypothesis):
 
     input_ids = encoded_dict['input_ids']
     attention_mask = encoded_dict['attention_mask']
+    sum_len = len(sentence1) + len(sentence2) + 30
+    decoded = TOKENIZER.decode(input_ids[0], skip_special_tokens=False)[:sum_len]
     
     model.eval()
     output = model(input_ids.to(device), attention_mask.to(device),
                                 )
     pred = torch.argmax(output, 1).item()
     probs = (F.softmax(output)).max().item()
-    return (sentence1, sentence2), (input_ids, attention_mask), (class_to_index[pred], probs)
+    return (sentence1, sentence2), (input_ids[:sum_len], attention_mask[:sum_len]), decoded, (class_to_index[pred], probs)
 
 if __name__ == '__main__':
     premise = 'Then I considered'
     hypothesis = 'I refused to even consider it'
-    (sentence1, sentence2), (input_ids, attention_mask), (pred, probs) = roberta_inference(args.premise, args.hypothesis)
+    (sentence1, sentence2), (input_ids, attention_mask), decoded, (pred, probs) = roberta_inference(args.premise, args.hypothesis)
     
     print()
