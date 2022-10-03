@@ -1,0 +1,68 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="content-row">
+    <div class="content-column">
+        <center>
+            <h3>Utilities</h3>
+        </center>
+        <p>Kaggle challenge: <a
+                href="https://www.kaggle.com/competitions/contradictory-my-dear-watson/overview">competitions/contradictory-my-dear-watson</a>
+        </p>
+        <p>Source code: <a href="https://github.com/vnk8071/nli-end-to-end">github.com/vnk8071/nli-end-to-end</a></p>
+        <hr>
+    </div>
+    <div class="content-column">
+        <center>
+            <h3>Notebook</h3>
+        </center>
+        <p>Tutorial the challenge using TPU: <a
+                href="https://www.kaggle.com/code/anasofiauzsoy/tutorial-notebook">anasofiauzsoy/tutorial-notebook</a>
+        </p>
+        <p>Tutorial using BERT with Tensorflow: <a
+                href="https://colab.research.google.com/drive/1iwxXjBIpy-O1LSOMD2fCV41LHURs-ZAS?usp=sharing">Colab</a>
+        </p>
+        <hr>
+    </div>
+</div>
+<div class="content-row">
+    <div class="content-column">
+        <center>
+            <h3>Feature Engineering</h3>
+        </center>
+        <p>Prepare custom dataset for BERT: <a
+                href="https://github.com/codemunic/Natural-Language-Inference/blob/main/bert_nli_pytorch.ipynb">bert_nli_pytorch.ipynb</a>
+        </p>
+        <p>Word embedding: <a
+                href="https://d2l.ai/chapter_natural-language-processing-pretraining/word2vec.html">word2vec.html</a>
+        </p>
+        <hr>
+        <center>
+            <h3>Database</h3>
+        </center>
+        <p>Database using sqlite3: <a href="https://flask.palletsprojects.com/en/2.2.x/patterns/sqlite3/">sqlite3</a>
+        </p>
+    </div>
+    <div class="content-column">
+        <center>
+            <h3>NLI Models</h3>
+        </center>
+        <p>BERT paper public: <a href="https://arxiv.org/pdf/1810.04805.pdf">arxiv.org/pdf/1810.04805</a></p>
+        <p>RoBERTa paper public: <a href="https://arxiv.org/pdf/1907.11692.pdf">arxiv.org/pdf/1907.11692</a></p>
+        <p>BERT with D2L's code: <a
+                href="https://d2l.ai/chapter_natural-language-processing-pretraining/bert.html">bert.html</a></p>
+        <hr>
+        <center>
+            <h3>Flask API</h3>
+        </center>
+        <p>Basic web application: <a
+                href="https://www.digitalocean.com/community/tutorials/how-to-make-a-web-application-using-flask-in-python-3">Tutorial</a>
+        </p>
+    </div>
+</div>
+<hr>
+<center>
+    <a href="{{ url_for('index') }}"><button class="btn btn-outline-primary btn-block" style="width: 50%;">Kick start
+            your brain</button></a>
+</center>
+{% endblock %}

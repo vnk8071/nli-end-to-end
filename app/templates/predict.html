@@ -1,40 +1,65 @@
 {% extends 'base.html' %}
 
 {% block content %}
+{% with messages = get_flashed_messages(with_categories=true) %}
+{% if messages %}
+<ul class=flashes>
+    {% for category, message in messages %}
+    <li class="{{ category }}">{{ message }}</li>
+    {% endfor %}
+</ul>
+{% endif %}
+{% endwith %}
 <div class="content-row">
     <div class="content-column">
         <h3>User input</h3>
-        <p>Original premise: {{user_premise}}</p>
-        <p>Original hypothesis: {{user_hypothesis}}</p>
+        <p><b>Original premise:</b> {{user_premise}}</p>
+        <p><b>Original hypothesis:</b> {{user_hypothesis}}</p>
         <hr>
         <h3>Step 1: Remove special punctuation</h3>
-        <p>Premise: {{premise_rp}}</p>
-        <p>Hypothesis: {{hypothesis_rp}}</p>
+        <p><b>Premise:</b> {{premise_rp}}</p>
+        <p><b>Hypothesis:</b> {{hypothesis_rp}}</p>
         <hr>
         <h3>Step 2: Translate to English</h3>
-        <p>Premise: {{premise_translated}}</p>
-        <p>Hypothesis: {{hypothesis_translated}}</p>
+        <p><b>Premise:</b> {{premise_translated}}</p>
+        <p><b>Hypothesis:</b> {{hypothesis_translated}}</p>
         <hr>
         <h3>Step 3: Clean stop words and multiple spaces</h3>
-        <p>Premise: {{premise_clean}}</p>
-        <p>Hypothesis: {{hypothesis_clean}}</p>
+        <p><b>Premise:</b> {{premise_clean}}</p>
+        <p><b>Hypothesis:</b> {{hypothesis_clean}}</p>
         <hr>
         <h3>Step 4: Add special token</h3>
-        <p>Premise: {{premise}}</p>
-        <p>Hypothesis: {{hypothesis}}</p>
+        <p><b>Premise:</b> {{premise}}</p>
+        <p><b>Hypothesis:</b> {{hypothesis}}</p>
         <hr>
         <h3>Step 5: Set up input for BERT model</h3>
-        <p>Token ids: {{index}}</p>
-        <p>Input mask: {{mask}}</p>
-        <p>Input type ids: {{token_type}}</p>
+        <p><b>Token ids:</b> {{index}}</p>
+        <p><b>Input mask:</b> {{mask}}</p>
+        <p><b>Input type ids:</b> {{token_type}}</p>
         <hr>
         <h3>Step 6: Classifier of BERT model</h3>
-        <p>Probability: {{prob}}</p>
-        <p>Prediction: {{pred}}</p>
+        <p><b>Probability:</b> {{prob}}</p>
+        <p><b>Prediction:</b> {{pred}}</p>
     </div>
     <div class="content-column">
-        <h2>Example:</h2>
-        <img src="static/images/sample.png">
+        <center>
+            <h3>Remove punctuation</h3>
+            <img src="static/images/remove_punctuation.png" style="width: 30%">
+            <br>
+            <h3>Translate to English</h3>
+            <img src="static/images/translate_logo.png" style="width: 20%">
+            <br>
+            <h3>Remove stop words</h3>
+            <img src="static/images/stopwords.png" style="width: 40%">
+            <br>
+            <h3>Flow BERT</h3>
+            <img src="static/images/bert_flow.png" style="width: 50%">
+        </center>
     </div>
 </div>
+<hr>
+<center>
+    <a href="{{ url_for('index') }}"><button class="btn btn-outline-primary btn-block" style="width: 50%;">Next
+            predict</button></a>
+</center>
 {% endblock %}

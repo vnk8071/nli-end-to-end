@@ -20,3 +20,5 @@ flask==2.2.2
 flask-sqlalchemy==2.5.1
 gdown==4.5.1
 nltk==3.7
+sklearn==1.1.2
+SentencePiece==0.1.97

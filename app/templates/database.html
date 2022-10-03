@@ -7,17 +7,21 @@
         <th>ID</th>
         <th>Premise</th>
         <th>Hypothesis</th>
+        <th>Premise cleaned</th>
+        <th>Hypothesis cleaned</th>
         <th>Probability</th>
         <th>Prediction</th>
         <th>Delete</th>
         {% for result in results %}
         <tr>
-            <td>{{ result.id }}</td>
-            <td>{{ result.premise }}</td>
-            <td>{{ result.hypothesis }}</td>
+            <td style="text-align: left;">{{ result.id }}</td>
+            <td style="text-align: left;">{{ result.premise }}</td>
+            <td style="text-align: left;">{{ result.hypothesis }}</td>
+            <td style="text-align: left;">{{ result.premise_cleaned }}</td>
+            <td style="text-align: left;">{{ result.hypothesis_cleaned }}</td>
             <td>{{ '%0.3f' % result.probability|float}}</td>
             <td>{{ result.prediction }}</td>
-            <td><a href="{{ url_for('delete', id=result.id) }}">Delete</a></td>
+            <td><a href="{{ url_for('delete', id=result.id) }}">X</a></td>
         </tr>
         {% endfor %}
     </table>

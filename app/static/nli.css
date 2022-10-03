@@ -37,6 +37,7 @@ body {
 }
 
 .content {
+    padding-top: 2%;
     padding-left: 2%;
     padding-right: 2%;
 }
@@ -47,12 +48,12 @@ body {
 
 .content-row h2{
     color: blueviolet;
-
 }
 
 .content-column {
     flex: 50%;
 }
+
 
 .footer {
     position: block;
@@ -63,9 +64,19 @@ body {
 
 .content-database table {
     width: 100%;
-    /* border-collapse: collapse; */
-    border: 1px solid rgb(0, 0, 0);
-    ;
+
+}
+
+.content-database th {
+    border-top: 2px solid rgb(0, 0, 0);
+    border-bottom: 2px solid rgb(0, 0, 0);
+    padding-top: 1%;
+    padding-bottom: 1%;
+}
+
+.content-database td {
+    padding-top: 1%;
+    padding-bottom: 1%;
 }
 
 .content-database,

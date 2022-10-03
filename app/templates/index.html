@@ -2,6 +2,22 @@
 
 {% block content %}
 <div class="container">
+    {% with messages = get_flashed_messages(with_categories=True) %}
+    {% if messages %}
+
+    {% for category, message in messages %}
+    <div class="alert alert-{{category}} alert-dismissible fade show" role="alert">
+        <span> {{ message }} </span>
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    {% endfor %}
+
+    {% endif %}
+    {% endwith %}
+</div>
+<div class="container">
     <h2>The challenge</h2>
     <p>
         If you have two sentences, there are three ways they could be related: one could entail the other, one could
@@ -10,9 +26,9 @@
         <br>
     </p>
     <p>
-        Your task is to create an NLI model that assigns labels of 0, 1, or 2 (corresponding to entailment, neutral, and
-        contradiction) to pairs of <b>premises and hypotheses.</b> To make things more interesting, the train and test
-        set include text in fifteen different languages!
+        Your task is to create an NLI model that <b>assigns labels of 0, 1, or 2 (corresponding to entailment, neutral,
+            and contradiction)</b> to pairs of <b>premises and hypotheses.</b> To make things more interesting, the
+        train and test set include text in fifteen different languages!
     </p>
     <p>For more details: <a href="https://www.kaggle.com/competitions/contradictory-my-dear-watson/overview">Kaggle</a>
         | Source code: <a href="https://github.com/vnk8071/nli-end-to-end">Github</a></p>

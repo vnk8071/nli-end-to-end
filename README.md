@@ -20,6 +20,11 @@ And then
 pip install -r requirements.txt
 ```
 
+## Download pre-trained models
+```
+bash download_pretrained_model.sh
+```
+
 ## BERT
 ### Feature engineering:
 ```
@@ -47,7 +52,13 @@ python roberta/roberta_train.py
 ### Inference:
 ```
 python roberta/roberta_inference.py --premise "<premise>" --hypothesis "<hypotheis>"
+python roberta/roberta_inference.py --premise "My own little corner of the world, policy working, is an example." --hypothesis "An example is policy working.,en,English"
 ```
+or simple with
+```
+python roberta/roberta_inference.py
+```
+
 ## API
 Run app Flask
 ```
