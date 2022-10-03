@@ -6,6 +6,8 @@ from deep_translator import GoogleTranslator
 from transformers import XLMRobertaModel, XLMRobertaForSequenceClassification, XLMRobertaTokenizer
 from roberta_model import XLMRoberta_Arch
 from util import remove_punctuation, clean_sentence
+import nltk
+nltk.download('stopwords')
 from nltk.corpus import stopwords
 import argparse
 
