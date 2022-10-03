@@ -3,13 +3,13 @@
 {% block content %}
 <div class="content-row">
     <div class="content-column">
-    <img src="static/images/roberta.PNG">
+        <img src="static/images/roberta.PNG">
     </div>
     <div class="content-column">
-    <h2>Input Premise and Hypothesis</h2>
-    <p>Original premise: {{premise}}</p>
-    <p>Original hypothesis: {{hypothesis}}</p>
-    <h3>English translation and Cleaning text</h3>
+        <h2>Input Premise and Hypothesis</h2>
+        <p>Original premise: {{premise}}</p>
+        <p>Original hypothesis: {{hypothesis}}</p>
+        <h3>English translation and Cleaning text</h3>
         <p>Premise: {{premise_cl}}</p>
         <p>Hypothesis: {{hypothesis_cl}}</p>
         <hr>
@@ -23,6 +23,11 @@
         <h3>Classifier of RoBERTa model</h3>
         <p>Probability: {{prob}}</p>
         <p>Prediction: {{pred}}</p>
+    </div>
 </div>
-</div>
+<hr>
+<center>
+    <a href="{{ url_for('index') }}"><button class="btn btn-outline-primary btn-block" style="width: 50%;">Next
+            predict</button></a>
+</center>
 {% endblock %}

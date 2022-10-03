@@ -49,7 +49,8 @@
                         <option value="RoBERTa">RoBERTa</option>
                     </select><br>
                     <br>
-                    <button class="btn btn-outline-primary btn-block" type="submit" style="width: 50%;">Predict</button>
+                    <button class="btn btn-outline-primary btn-block" type="submit" style="width: 50%;"
+                        onclick="progress()">Predict</button>
                 </center>
             </form>
         </div>
@@ -59,4 +60,25 @@
         <img src="static/images/sample.png">
     </div>
 </div>
+<div class="progress">
+    <div id="dynamic" class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar"
+        aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%">
+        <span id="current-progress"></span>
+    </div>
+</div>
+<script type="text/javascript">
+    function progress() {
+        document.getElementById('dynamic');
+        var current_progress = 0;
+        var interval = setInterval(function () {
+            current_progress += 100;
+            $("#dynamic")
+                .css("width", current_progress + "%")
+                .attr("aria-valuenow", current_progress)
+                .text("Please wait a minute");
+            if (current_progress >= 100)
+                clearInterval(interval);
+        }, 3000);
+    }
+</script>
 {% endblock %}
