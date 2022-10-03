@@ -38,8 +38,16 @@ or simple with
 python bert/inference.py
 ```
 
-## RoBERTa (Coming soon)
+## RoBERTa 
 
+Train:
+```
+python roberta/roberta_train.py
+```
+### Inference:
+```
+python roberta/roberta_inference.py --premise "<premise>" --hypothesis "<hypotheis>"
+```
 ## API
 Run app Flask
 ```
