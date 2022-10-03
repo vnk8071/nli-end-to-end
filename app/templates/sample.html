@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="content-database">
+    <h1>NLI Samples</h1>
+    <table>
+        <th>Language</th>
+        <th>Premise</th>
+        <th>Hypothesis</th>
+        <th>Label</th>
+        {% for language, premise, hypothesis, label in zip(languages, premises, hypothesises, labels) %}
+        <tr>
+            <td style="text-align: center;">{{ language }}</td>
+            <td style="text-align: left;">{{ premise }}</td>
+            <td style="text-align: left;">{{ hypothesis }}</td>
+            <td style="text-align: center;">{{ label }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</div>
+{% endblock %}
