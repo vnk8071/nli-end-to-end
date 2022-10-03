@@ -4,6 +4,8 @@ class NLIDatabase(db.Model):
     id = db.Column("id", db.Integer, primary_key=True)
     premise = db.Column(db.String(1000))
     hypothesis = db.Column(db.String(1000))
+    premise_cleaned = db.Column(db.String(1000))
+    hypothesis_cleaned = db.Column(db.String(1000))
     probability = db.Column(db.Float)
     prediction = db.Column(db.String(10))
 
