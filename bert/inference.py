@@ -33,8 +33,8 @@ def bert_inference(premise=args.premise, hypothesis=args.hypothesis):
     print(f"Translated hypothesis: {hypothesis_translated}")
     print('-'*50)
 
-    premise_clean = clean_sentence(premise_translated, STOPWORDS)
-    hypothesis_clean = clean_sentence(hypothesis_translated, STOPWORDS)
+    premise_clean = clean_sentence(remove_punctuation(premise_translated), STOPWORDS)
+    hypothesis_clean = clean_sentence(remove_punctuation(hypothesis_translated), STOPWORDS)
     print(f"Premise after clean: {premise_clean}")
     print(f"Hypothesis after clean: {hypothesis_clean}")
     print('-'*50)
