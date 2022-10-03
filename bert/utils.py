@@ -23,7 +23,7 @@ def trim_sentence(sentence):
         return sentence
 
 def remove_punctuation(sentence):
-    sentence = re.sub(r"[()\"#/@;:<>{}`+=~|.!?,]", " ", sentence)
+    sentence = re.sub(r"[()\"#/@;:<>{}`'+=~|.!?,]", " ", sentence)
     return sentence
 
 
