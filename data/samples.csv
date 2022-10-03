@@ -1,0 +1,14 @@
+premise,hypothesis,language,label
+"For himself he chose Atat??rk, or Father of the Turks.",Ataturk was the father of the Turkish nation.,English,entailment
+"ปีที่ผ่านมาเด็กที่ถูกทารุณกรรมและถูกละเลยมากกว่า 48,000 คนในรัฐนิวยอร์กถูกข่มขู่ทารุณกรรมทางอารมณ์ปฏิเสธการดูแลไม่เพียงพอและการดูแลที่เหมาะสม",เด็กที่ถูกทารุณและถูกทอดทิ้งส่วนใหญ่เป็นคนกลุ่มน้อย,Thai,neutral
+ہم نہیں جانتے تھے کہ یو 2 (U2) کیا تھا اور کوئی بھی U2 کے بارے میں کچھ بھی نہیں جانتا تھا.,ہم نے ہوا میں جو چیز دیکھی ہمیں اس کا نام معلوم نہیں تھا۔,Urdu,neutral
+Οι λειτουργίες C-R μπορούν επίσης να εκτιμηθούν με ή χωρίς ξεκάθαρα όρια.,Οι λειτουργίες C-R μπορούν να εκτιμηθούν με διαφορετικούς τρόπους και στη συνέχεια να δημοσιευθούν για να αποφασίσει ο αναγνώστης.,Greek,neutral
+"Да, - сказал Огле, - это правда. Но были и те, кто по-прежнему открыто и откровенно выступали против этого курса.",Огл никогда не упоминал противников существующего курса.,Russian,contradiction
+Lợi ích quan trọng nhất của thành viên trong Hiệp hội Audubon Quốc gia cho bạn không có gì ngay lập tức hữu hình trong trở lại.,Mỗi thành viên của Hội  Audubon quốc gia  đều nhận được phiếu ăn tối miễn phí.,Vietnamese,neutral
+"Después viene Bona, un centro de cestería que también se anuncia como el hogar de la danza kecak.",Bona es el hogar de la danza kecak.,Spanish,entailment
+"Ihm wurde klar, dass er sich unter Umständen schnell zurückziehen muss.","Er erkannte, dass er einen schnellen Schritt machen musste.",German,entailment
+"Тазгодишният обяд на възпитаници е насрочен за 23 октомври 1991 г. по време на годишната среща на AMRA в Нешвил, Тенеси.",Годишната среща на AMRA беше в Нашвил през 1991.,Bulgarian,entailment
+"İngiltere'nin, onu sitemkar bir şekilde düzeltti.",Onun sorununu çözdü.,Turkish,entailment
+"Ces travailleurs n'étaient pas bloqués, mais contrairement à la plupart des occupants des étages supérieurs, ils avaient choisi de ne pas descendre immédiatement après l'impact.",Tous les occupants des étages supérieurs sont immédiatement descendus lors de l'impact.,French,contradiction
+但突然间，我们被召集去看正在飞行演出。,我们被告知不要向外看。,Chinese,contradiction
+वह नहीं जानता था कि ओग्ले ने उनमें जगाए आतंक से ग्रस्त लोग वोल्वरस्टोन के द्रष्टिकोण से अलग सोचेंगे।,उसे यकीन नहीं था कि क्या घबराए हुए पुरुष वूवरस्टोन की तुलना में चीजों को अलग-अलग देखेंगे।,Hindi,entailment
