@@ -35,7 +35,7 @@ def user_input():
             user_hypothesis = request.form["hypothesis"]
             user_model = request.form["model"]
             if user_model == "BERT":
-              (premise_rp, hypothesis_rp), (premise_translated, hypothesis_translated), (premise_clean, hypothesis_clean), (premise, hypothesis), (index, mask, token_type), (prob, pred) = bert_inference(user_premise, user_hypothesis)
+                (premise_rp, hypothesis_rp), (premise_translated, hypothesis_translated), (premise_clean, hypothesis_clean), (premise, hypothesis), (index, mask, token_type), (prob, pred) = bert_inference(user_premise, user_hypothesis)
                 result = NLIDatabase(premise=user_premise,
                                     hypothesis=user_hypothesis,
                                     probability=prob,
