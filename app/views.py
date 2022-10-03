@@ -1,6 +1,7 @@
 import os
 import sys
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+import pandas as pd
 from flask import render_template, request, flash, redirect, url_for
 from wtforms.validators import ValidationError
 from __init__ import create_app
@@ -92,7 +93,15 @@ def delete(id):
 def document():
     return render_template("document.html")
 
-
+@app.route("/sample")
+def sample():
+    # header = ['premise', 'hypothesis', 'language','label']
+    df = pd.read_csv("data/samples.csv")
+    premises = df['premise'].to_list()
+    hypothesises = df['hypothesis'].to_list()
+    languages = df['language'].to_list()
+    labels = df['label'].to_list()
+    return render_template("sample.html", zip=zip, premises=premises, hypothesises=hypothesises, languages=languages, labels=labels)
 if __name__ == '__main__':
     create_table()
     app.run(host=app.config['HOST'], port=app.config['PORT'])

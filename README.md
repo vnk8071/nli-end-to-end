@@ -51,7 +51,7 @@ python roberta/roberta_train.py
 ```
 ### Inference:
 ```
-python roberta/roberta_inference.py --premise "<premise>" --hypothesis "<hypotheis>"
+python roberta/roberta_inference.py --premise "<premise>" --hypothesis "<hypothesis>"
 python roberta/roberta_inference.py --premise "My own little corner of the world, policy working, is an example." --hypothesis "An example is policy working.,en,English"
 ```
 or simple with
@@ -66,7 +66,14 @@ python app/views.py
 ```
 Open UI of app: http://127.0.0.1:5000/
 
-## Docker (Coming soon)
+## Docker
+Build and run
+```
+docker build -t nli:v1 .
+docker run -it -p 5000:5000 nli:v1
+```
 
-## Amazon Web Service (AWS) Coming soon
+## Amazon Web Service (AWS)
+- Create EC2 instance
+- Pull Docker image from docker hub ```vnk8071/nli-end-to-end:v1```
 
