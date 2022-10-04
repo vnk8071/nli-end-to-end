@@ -76,4 +76,9 @@ docker run -it -p 5000:5000 nli:v1
 ## Amazon Web Service (AWS)
 - Create EC2 instance
 - Pull Docker image from docker hub ```vnk8071/nli-end-to-end:v1```
-
+```
+docker pull vnk8071/nli-end-to-end
+docker run -itd -p 80:80 vnk8071/nli-end-to-end:v1
+```
+With IPv4 public: http://<IPv4 Address>
+With localhost: http://localhost:80
